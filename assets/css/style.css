@@ -1,0 +1,393 @@
+/*immagine banner*/
+@media (min-width: 767px) {
+    .desktop {
+      display: block;
+    }
+    .desktop img {
+      max-width: 100%;
+    }
+    .mobile {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .mobile {
+      display: block;
+    }
+  
+    .mobile img {
+      max-width: 100%;
+    }
+  
+    .desktop {
+      display: none;
+    }
+  }
+  
+  
+  
+  /*pulsati tab*/
+  .nav-mytabs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5em;
+    background-color: #f2f5f5;
+  }
+  
+  .nav-mytabs li {
+    margin: auto;
+    padding: 0.25em;
+    float: left;
+    width: 22%;
+  }
+  
+  
+  /* quando uso i tab nel header dell pagine di secondo livello*/
+  header .nav-mytabs {
+    margin: 0;
+    background-color: transparent;
+  }
+  header .nav-mytabs li {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    width: 15%;
+  }
+  header .nav-mytabs li:first-child, header .nav-mytabs li:nth-child(2) {
+    width: auto;
+  }
+  header .nav-mytabs li:first-child a.active {
+    box-shadow: inset 0 0 0 2px #153d8a;
+  }
+  header .nav-mytabs li:first-child a:hover:first-child  {
+    background-color: transparent;
+  }
+  
+  /*dimensioni al rimpicciiolire delle schermo*/
+  @media screen and (max-width: 768px) {
+    .nav-mytabs li, header .nav-mytabs li {
+      width: 50%;
+    }
+  }
+   
+  @media screen and (max-width: 375px) {
+    .nav-mytabs li, header .nav-mytabs li {
+      width: 100%;
+    }
+  }
+   
+  /*.nav-mytabs li:not(:last-child) {
+    margin-right: 7px;
+  }*/
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    overflow: hidden; /* Ensure video doesn't overflow */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the entire container */
+    z-index: -1;
+}
+
+
+  
+  .nav-mytabs a {
+    position: relative;
+    text-align: center;
+    border-radius: 0.375em;
+    box-shadow: inset 0 0 0 2px #153d8a;
+    color: #153d8a !important;
+    background-color: white;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .nav-mytabs a.active{
+    opacity: 1;
+    top: 0;
+    box-shadow: inset 0 0 0 4px #76c2be;
+    font-weight: bolder;
+  }
+  
+  .nav-mytabs a:hover {
+    background-color: rgba(117, 224, 219, 0.15);
+  }
+   
+  .mytab-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 0 4px 4px 4px;
+    background: white;
+  }
+  
+  
+  .nav-mytabs a.nav-link{
+    vertical-align: middle;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /*  to rotate icons ^ when show/hide div content  */
+  .rotate{
+    -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .rotate.down{
+      -moz-transform:rotate(180deg);
+      -webkit-transform:rotate(180deg);
+      transform:rotate(180deg);
+  }
+  
+  a.showHide{
+    cursor: pointer;
+  }
+  
+  span.data {
+    font-weight: bold;
+    color: #ea7f0b;
+  }
+  
+  
+  /*mySeminarTable for pastEvents seminars*/
+  /*mySeminar for ongoing events seminars*/
+  /*myProgramme for workshops' schedules*/
+  /*myAbstract for workshops' schedules*/
+  
+  table.mySeminarsTable td, 
+  table.mySeminars td, 
+  table.myKickOff td, 
+  table.myJournalClub td, 
+  table.myProgramme td,
+  table.myWorkshopsTableDouble td, 
+  table.myAbstract td{
+    vertical-align: middle;
+  }
+  
+  table.myAbstract td{
+    vertical-align: top;
+  }
+  
+  table.mySeminarsTable td:first-child, 
+  table.mySeminars td:first-child, 
+  table.myJournalClub td:first-child,
+  table.myProgramme td:nth-child(2) a, 
+  table.myAbstract td:first-child {
+    width: 20%;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  table.myAbstract td:nth-child(2) {
+    width: 20%;
+    text-transform: capitalize;
+  }
+  
+  table.mySeminarsTable td:nth-child(2), 
+  table.myJournalClub td:nth-child(2),
+  table.myProgramme td:nth-child(3){
+    width: 60%;
+    text-transform: capitalize;
+  }
+  
+  table.myAbstract td:nth-child(3) {
+    width: 60%;
+  }
+  
+  table.mySeminars td:nth-child(2) {
+    width: 50%;
+    text-transform: capitalize;
+  }
+  
+  table.myKickOff td:first-child,
+  table.myWorkshopsTable td:first-child{
+    text-transform: capitalize;
+  }
+  
+  table.mySeminarsTable td:nth-child(2),
+  table.mySeminars td:nth-child(2),
+  table.myKickOff td:first-child,
+  table.myJournalClub td:nth-child(2),
+  table.myJournalClub td:nth-child(2) a,
+  table.myWorkshopsTable td:first-child,
+  table.myProgramme td:nth-child(3),
+  table.myProgramme td:nth-child(3) a,
+  table.myAbstract td:nth-child(3) a {
+    font-style: italic;
+    color: #153d8a;/*#76c2be; */
+    font-weight: bold;
+  }
+  
+  table.myAbstract td:nth-child(3) a {
+    text-transform: capitalize;
+  }
+  
+  table.mySeminarsTable td:nth-child(n+2) a,  table.mySeminarsTable td:nth-child(n+2) span,
+  table.mySeminars td:last-child a,
+  table.myKickOff td a,
+  table.myWorkshopsTable td:nth-child(n+1) a, table.myWorkshopsTable td:nth-child(n+2) span {
+    font-size:2em;
+    color: #153d8a;
+  }
+  
+  table.mySeminarsTable td:nth-child(n+2) span,
+  table.mySeminars td:last-child span,
+  table.myWorkshopsTable td:nth-child(n+2) span {
+    font-size:2em;
+    color: #7f888f;
+  }
+  
+  
+  table.myKickOff td:first-child {
+    width: 90%;
+  }
+  
+  table.myWorkshopsTable td:first-child {
+    width: 80%;
+  }
+  
+  table.myWorkshopsTableDouble td:nth-child(odd){
+    background-color: #92d6d3 !important;
+  }
+  
+  article div.seminario h3{
+    text-transform: capitalize;
+  }
+  
+  
+  div.cognomi span {
+    text-transform: uppercase;
+  }
+  
+  
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: unset;
+  }
+  
+  /* The Close Button */
+  .myClose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .myClose:hover,
+  .myClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  
+  a:hover {
+    text-decoration: unset;
+    border-bottom: solid 1px;
+  }
+  a.button:hover , a.nav-link {
+    border-bottom: unset;
+  }
+  header.major a:hover {
+    cursor: pointer;
+    /*background-color: rgba(118, 194, 190, 0.05);*/
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-bottom: solid 3px;
+  }
+  
+  a.stamp:hover{
+    cursor: default;
+    background-color: transparent;
+    border: double;
+    }
+  a.stamp{
+    border: double;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    }
+  
+  
+  /*per il logo nel header delle pagine di secondo livello*/
+  .logoD {
+     width: 20px;
+     vertical-align: middle;
+  }
+  
+  
+  ul.mycontact {
+    list-style: none;
+    padding: 0;
+  }
+  
+  
+  
+  
+  @media (min-width: 1025px) {
+    .lingua {
+      width: 10%;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .lingua {
+      width: 10%;
+      padding-left: unset;
+      padding-right: unset;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .lingua {
+      width: 25%;
+      float: right;
+    }
+  }
+  
+  
+  .clickable {
+       cursor:pointer;
+    }
